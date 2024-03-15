@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "products ",
+};
 export default function products() {
   return (
     <div>
