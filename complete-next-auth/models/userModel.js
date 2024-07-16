@@ -4,7 +4,6 @@ const userSchema = new mongoose.Schema({
   username: {
     type: String,
     required: [true, "please provide a username"],
-    unique: true,
   },
   email: {
     type: String,
@@ -26,7 +25,7 @@ const userSchema = new mongoose.Schema({
   forgotPasswordToken: String,
   forgotPasswordExpiry: Date,
   verifyToken: String,
-  VerifyTokenExpiry: String,
+  VerifyTokenExpiry: Date,
 });
 export const User =
   mongoose.models.Users || mongoose.model("Users", userSchema);
